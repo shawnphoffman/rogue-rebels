@@ -1,0 +1,95 @@
+.wp-content {
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply mb-4 font-bold leading-snug;
+		&.has-background {
+			@apply p-4 text-center text-black rounded-lg bg-brand-orange/50;
+			* {
+				@apply text-black;
+			}
+		}
+	}
+	h1 {
+		@apply mt-10 text-4xl text-brand-orange;
+		@apply md:text-5xl;
+	}
+	h2 {
+		@apply mt-10 text-3xl text-brand-orange/90;
+		@apply md:text-4xl;
+	}
+	h3 {
+		@apply mt-8 text-2xl text-brand-orange/80;
+		@apply md:text-3xl;
+	}
+	h4 {
+		/* @apply mt-6 text-xl text-brand-orange; */
+		@apply mt-6 text-xl;
+		@apply md:text-2xl;
+	}
+
+	/* ================== */
+	/* TEXT */
+	/* ================== */
+	blockquote {
+		@apply p-4 my-4 text-xl italic font-medium leading-relaxed text-zinc-500 border-s-4 border-brand-gray bg-black/5;
+	}
+
+	/* ================== */
+	/* LISTS */
+	/* ================== */
+	ul,
+	ol {
+		&.wp-block-list {
+			@apply space-y-1 text-black list-inside;
+			::marker {
+				@apply text-brand-orange;
+			}
+		}
+	}
+	li ul,
+	li ol {
+		@apply my-0 ps-4;
+	}
+	ul {
+		@apply list-disc;
+	}
+	ol {
+		@apply list-decimal;
+	}
+
+	/* ================== */
+	/* LINKS */
+	/* ================== */
+	a {
+		@apply text-brand-orange hover:bg-squiggle hover:text-brand-orange;
+	}
+
+	/* ================== */
+	/* MISC */
+	/* ================== */
+	img {
+		@apply rounded;
+	}
+
+	> div > p {
+		@apply my-4;
+	}
+
+	/* wp-block-embed */
+	figure {
+		@apply my-4;
+	}
+
+	.wp-block-social-links {
+		@apply flex space-x-2 list-none;
+		svg {
+			@apply w-12 h-12 fill-brand-orange;
+		}
+	}
+
+	.screen-reader-text {
+		@apply sr-only;
+	}
+}

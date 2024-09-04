@@ -1,0 +1,69 @@
+/* BASELINE */
+.portableText {
+	@apply text-lg leading-relaxed;
+}
+
+.portableText p,
+.portableText ul,
+.portableText ol,
+.portableText blockquote {
+	@apply my-6;
+}
+
+.portableText {
+	/* ================== */
+	/* HEADINGS */
+	/* ================== */
+	h2,
+	h3,
+	h4 {
+		@apply mb-4 font-bold leading-snug;
+	}
+	h2 {
+		@apply mt-10 text-3xl text-brand-red;
+		@apply md:text-4xl;
+	}
+	h3 {
+		@apply mt-8 text-2xl text-brand-yellow;
+		@apply md:text-3xl;
+	}
+	h4 {
+		@apply mt-6 text-xl text-brand-blue;
+		@apply md:text-2xl;
+	}
+
+	/* ================== */
+	/* TEXT */
+	/* ================== */
+	blockquote {
+		@apply p-4 my-4 text-xl italic font-medium leading-relaxed text-white border-s-4 border-brand-blue bg-white/5;
+	}
+
+	/* ================== */
+	/* LISTS */
+	/* ================== */
+	ul,
+	ol {
+		@apply space-y-1 text-white list-inside;
+		::marker {
+			@apply text-brand-yellow;
+		}
+	}
+	li ul,
+	li ol {
+		@apply my-0 ps-4;
+	}
+	ul {
+		@apply list-disc;
+	}
+	ol {
+		@apply list-decimal;
+	}
+
+	/* ================== */
+	/* LINKS */
+	/* ================== */
+	a:not(:global(.embed)) {
+		@apply text-brand-blue hover:bg-squiggle hover:text-brand-yellow;
+	}
+}
