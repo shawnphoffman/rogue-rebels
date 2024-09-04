@@ -20,15 +20,15 @@
 		@apply mb-4 font-bold leading-snug;
 	}
 	h2 {
-		@apply mt-10 text-3xl text-brand-red;
+		@apply mt-10 text-3xl text-brand-fallback;
 		@apply md:text-4xl;
 	}
 	h3 {
-		@apply mt-8 text-2xl text-brand-yellow;
+		@apply mt-8 text-2xl text-brand-fallback;
 		@apply md:text-3xl;
 	}
 	h4 {
-		@apply mt-6 text-xl text-brand-blue;
+		@apply mt-6 text-xl text-brand-fallback;
 		@apply md:text-2xl;
 	}
 
@@ -36,7 +36,7 @@
 	/* TEXT */
 	/* ================== */
 	blockquote {
-		@apply p-4 my-4 text-xl italic font-medium leading-relaxed text-white border-s-4 border-brand-blue bg-white/5;
+		@apply p-4 my-4 text-xl italic font-medium leading-relaxed text-white border-s-4 border-brand-fallback bg-white/5;
 	}
 
 	/* ================== */
@@ -46,7 +46,7 @@
 	ol {
 		@apply space-y-1 text-white list-inside;
 		::marker {
-			@apply text-brand-yellow;
+			@apply text-brand-fallback;
 		}
 	}
 	li ul,
@@ -64,6 +64,6 @@
 	/* LINKS */
 	/* ================== */
 	a:not(:global(.embed)) {
-		@apply text-brand-blue hover:bg-squiggle hover:text-brand-yellow;
+		@apply text-brand-fallback hover:bg-squiggle hover:text-brand-fallback;
 	}
 }

@@ -55,7 +55,7 @@ export default async function PostComments({ url }: Props) {
 	return (
 		<div className="flex flex-col items-center justify-center w-full max-w-screen-md gap-2 p-4 text-left rounded-lg bg-zinc-950/75">
 			{/* STATS */}
-			<h2 className="text-2xl font-bold text-center text-brand-red" id="comments-section">
+			<h2 className="text-2xl font-bold text-center text-brand-fallback" id="comments-section">
 				Stats
 			</h2>
 			<Link href={postUrl} target="_blank" rel="noreferrer noopener" className="group">
@@ -72,7 +72,7 @@ export default async function PostComments({ url }: Props) {
 			{!thread.replies || thread.replies.length === 0 ? null : (
 				<>
 					{/* COMMENTS */}
-					<h2 className="text-2xl font-bold text-center text-brand-red">Comments</h2>
+					<h2 className="text-2xl font-bold text-center text-brand-fallback">Comments</h2>
 					<p className="text-sm">
 						Comments are fetched directly from{' '}
 						<Link href={postUrl} className="underline" target="_blank" rel="noreferrer noopener">

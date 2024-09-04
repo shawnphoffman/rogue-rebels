@@ -50,7 +50,7 @@ export default async function BlogPage({ params }: PageProps) {
 				))}
 			</div>
 
-			<a href={post.URL} className="text-brand-blue hover:text-brand-yellow hover:bg-squiggle">
+			<a href={post.URL} className="text-brand-fallback hover:text-brand-fallback hover:bg-squiggle">
 				WP Link
 			</a>
 			{/* <p>{params.slug}</p> */}

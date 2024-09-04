@@ -31,7 +31,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 					<a
 						href={`#${slug}`}
 						aria-label={props.children as string}
-						className="absolute opacity-0 group-hover:opacity-100 h-full cursor-pointer top-2 -left-6 group-hover:!bg-none !text-brand-red"
+						className="absolute opacity-0 group-hover:opacity-100 h-full cursor-pointer top-2 -left-6 group-hover:!bg-none !text-brand-fallback"
 					>
 						<FontAwesomeIcon icon={faLink} />
 					</a>
@@ -46,7 +46,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 					<a
 						href={`#${slug}`}
 						aria-label={props.children as string}
-						className="absolute opacity-0 group-hover:opacity-100 h-full cursor-pointer top-1 -left-6 group-hover:!bg-none !text-brand-yellow"
+						className="absolute opacity-0 group-hover:opacity-100 h-full cursor-pointer top-1 -left-6 group-hover:!bg-none !text-brand-fallback"
 					>
 						<FontAwesomeIcon icon={faLink} />
 					</a>
@@ -61,7 +61,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 					<a
 						href={`#${slug}`}
 						aria-label={props.children as string}
-						className="absolute opacity-0 group-hover:opacity-100 h-full cursor-pointer top-0.5 -left-6 group-hover:!bg-none !text-brand-blue"
+						className="absolute opacity-0 group-hover:opacity-100 h-full cursor-pointer top-0.5 -left-6 group-hover:!bg-none !text-brand-fallback"
 					>
 						<FontAwesomeIcon icon={faLink} size="sm" />
 					</a>
@@ -81,16 +81,16 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 			return <span className="text-red-500">{children}</span>
 		},
 		textBlue: ({ children }) => {
-			return <span className="text-brand-blue">{children}</span>
+			return <span className="text-brand-fallback">{children}</span>
 		},
 		textGreen: ({ children }) => {
 			return <span className="text-green-500">{children}</span>
 		},
 		underline: ({ children }) => {
-			return <span className="underline underline-offset-2 decoration-brand-red">{children}</span>
+			return <span className="underline underline-offset-2 decoration-brand-fallback">{children}</span>
 		},
 		'strike-through': ({ children }) => {
-			return <span className="line-through decoration-brand-blue decoration-2">{children}</span>
+			return <span className="line-through decoration-brand-fallback decoration-2">{children}</span>
 		},
 	},
 	types: {

@@ -15,7 +15,7 @@ export default function Stars({ count }) {
 	}
 
 	return (
-		<div className="flex text-brand-yellow flex-nowrap" role="img" aria-label={`Rating: ${numStars}/5 stars`}>
+		<div className="flex text-brand-fallback flex-nowrap" role="img" aria-label={`Rating: ${numStars}/5 stars`}>
 			{solidStars}
 			{emptyStars}
 		</div>

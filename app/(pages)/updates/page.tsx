@@ -12,7 +12,7 @@ export default async function UpdatesPage() {
 
 	return (
 		<div className="w-full max-w-3xl mb-8 border rounded-lg border-zinc-900 bg-zinc-950/75">
-			<div className="flex flex-col justify-center w-full p-2 divide-y divide-brand-blue" aria-label="Podcast Updates">
+			<div className="flex flex-col justify-center w-full p-2 divide-y divide-brand-fallback" aria-label="Podcast Updates">
 				{posts.map(post => {
 					return <PostRow key={post._id} post={post as NonNullable<POST_QUERYResult>} />
 				})}

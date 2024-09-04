@@ -17,6 +17,7 @@ module.exports = {
 					dark: colors.zinc['800'],
 					gray: colors.zinc['600'],
 					muted: colors.zinc['400'],
+					fallback: colors.pink['500'],
 					// red: colors.red['600'],
 					// blue: colors.sky['400'],
 					// yellow: colors.yellow['400'],

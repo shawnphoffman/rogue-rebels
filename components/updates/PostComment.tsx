@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const Comment = ({ comment }: { comment: AppBskyFeedDefs.ThreadViewPost }) => {
 	const author = comment.post.author
-	const avatarClassName = 'h-6 w-6 shrink-0 rounded-full bg-brand-blue'
+	const avatarClassName = 'h-6 w-6 shrink-0 rounded-full bg-brand-fallback'
 
 	if (!AppBskyFeedPost.isRecord(comment.post.record)) return null
 
@@ -26,7 +26,13 @@ export const Comment = ({ comment }: { comment: AppBskyFeedDefs.ThreadViewPost }
 		// console.log({ segment })
 		if (segment.isLink() && segment.link) {
 			richText.push(
-				<Link key={counter} href={segment.link.uri} target="_blank" rel="noreferrer noopener" className="text-brand-blue hover:bg-squiggle">
+				<Link
+					key={counter}
+					href={segment.link.uri}
+					target="_blank"
+					rel="noreferrer noopener"
+					className="text-brand-fallback hover:bg-squiggle"
+				>
 					{segment.text}
 				</Link>
 			)
@@ -37,7 +43,7 @@ export const Comment = ({ comment }: { comment: AppBskyFeedDefs.ThreadViewPost }
 					href={`https://bsky.app/profile/${segment.mention.did}`}
 					target="_blank"
 					rel="noreferrer noopener"
-					className="text-brand-blue hover:bg-squiggle"
+					className="text-brand-fallback hover:bg-squiggle"
 				>
 					{segment.text}
 				</Link>
@@ -89,7 +95,7 @@ export const Comment = ({ comment }: { comment: AppBskyFeedDefs.ThreadViewPost }
 				<Actions post={comment.post} url={actionsUrl} />
 			</div>
 			{comment.replies && comment.replies.length > 0 && (
-				<div className="pl-2 ml-2 border-l border-brand-red">
+				<div className="pl-2 ml-2 border-l border-brand-fallback">
 					{comment.replies.sort(sortByLikes).map(reply => {
 						if (!AppBskyFeedDefs.isThreadViewPost(reply)) return null
 						return <Comment key={reply.post.uri} comment={reply} />
@@ -122,7 +128,7 @@ export const Actions = ({ post, url }: { post: AppBskyFeedDefs.PostView; url: st
 			<FontAwesomeIcon icon={faHeart} />
 			<p className="text-sm">{post.likeCount ?? 0}</p>
 		</div>
-		<Link href={url} target="_blank" rel="noreferrer noopener" className="flex flex-row items-center gap-1.5 hover:text-brand-blue">
+		<Link href={url} target="_blank" rel="noreferrer noopener" className="flex flex-row items-center gap-1.5 hover:text-brand-fallback">
 			<FontAwesomeIcon icon={faUpRightFromSquare} />
 		</Link>
 	</div>

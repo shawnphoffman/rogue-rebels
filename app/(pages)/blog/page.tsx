@@ -20,7 +20,7 @@ export default async function BlogPage() {
 				<ul className="flex flex-col items-center justify-center gap-2">
 					{blogPosts.map((post: any) => (
 						<li key={post.ID} className="flex flex-col gap-2">
-							<a href={`/blog/${post.slug}`} className="text-brand-blue hover:text-brand-yellow hover:bg-squiggle">
+							<a href={`/blog/${post.slug}`} className="text-brand-fallback hover:text-brand-fallback hover:bg-squiggle">
 								{post.title}
 								{/* <h2 className="text-xl font-bold ">{post.title}</h2> */}
 								{/* <p dangerouslySetInnerHTML={{ __html: post.excerpt }}></p> */}
