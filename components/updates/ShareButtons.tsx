@@ -10,7 +10,7 @@ export default function ShareButtons({ slug, title }) {
 		? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}`
 		: 'http://localhost:3000'
 	const url = `${domain}/updates/${slug}`
-	const formattedTitle = `Just Shillin': ${title}`
+	const formattedTitle = `The Rogue Rebels': ${title}`
 
 	return (
 		<div className="flex flex-row items-center gap-2">
