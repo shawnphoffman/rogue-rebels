@@ -8,6 +8,11 @@ module.exports = {
 			},
 			{
 				protocol: 'https',
+				hostname: 'theroguerebels.com',
+				port: '',
+			},
+			{
+				protocol: 'https',
 				hostname: 'cdn.sanity.io',
 			},
 			{

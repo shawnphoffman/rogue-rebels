@@ -5,7 +5,9 @@ import { sanitize } from 'isomorphic-dompurify'
 
 import { appleRatingUrl, rssFeedUrl } from './(pages)/(links)/links'
 
-export async function getWordpressPost(slug: string, preview = false) {
+const wpPostFields = `ID,title,author,excerpt,slug,date,categories,content,URL,featured_image`
+
+export async function getWordpressPost(slug: string) {
 	const res = await fetch(`${process.env.WORDPRESS_API_URL}/posts/slug:${slug}`)
 
 	const data = await res.json()
@@ -15,7 +17,18 @@ export async function getWordpressPost(slug: string, preview = false) {
 	return data
 }
 
-export async function getAllWordpressPosts(count = 20, preview = false) {
+export async function getAllWordpressPosts(count = 25, page = 0) {
+	const res = await fetch(`${process.env.WORDPRESS_API_URL}/posts/?number=${count}&fields=${wpPostFields}&page=${page + 1}`)
+
+	const data = await res.json()
+	console.log('getAllWordpressPosts', count, page, data.posts.length)
+
+	// console.log('getAllPosts', data)
+
+	return data.posts
+}
+
+export async function getAllWordpressPostsByCriteria(category, tag, count = 20) {
 	const res = await fetch(`${process.env.WORDPRESS_API_URL}/posts/?number=${count}`)
 
 	const data = await res.json()

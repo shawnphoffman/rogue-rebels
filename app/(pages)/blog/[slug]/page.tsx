@@ -81,7 +81,7 @@ export async function generateMetadata({ params }: PageProps, parent: ResolvingM
 			// images: mainImage ? [mainImage] : previousImages,
 			url: `/blog/${post.slug}`,
 			type: 'article',
-			publishedTime: post.publishedAt,
+			publishedTime: post.date,
 			authors: [post.author?.name!, siteTitle],
 		},
 	}
