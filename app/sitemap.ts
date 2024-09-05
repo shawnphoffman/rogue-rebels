@@ -10,12 +10,12 @@ export default function sitemap() {
 			url: `${root}/episodes`,
 			lastModified: new Date(),
 		},
+		// {
+		// 	url: `${root}/listen-now`,
+		// 	lastModified: new Date(),
+		// },
 		{
-			url: `${root}/listen-now`,
-			lastModified: new Date(),
-		},
-		{
-			url: `${root}/updates`,
+			url: `${root}/blog`,
 			lastModified: new Date(),
 		},
 	]

@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
 
-import Awards from '@/components/core/Awards'
+// import Awards from '@/components/core/Awards'
 import LinkCard from '@/components/core/LinkCard'
 import Loading from '@/components/core/Loading'
 import RatingsApple from '@/components/core/RatingsApple'
@@ -15,8 +15,8 @@ export default async function Home() {
 	return (
 		<>
 			<div className="w-full max-w-4xl text-base leading-normal sm:text-lg">
-				Join Andy and Shawn for a casual and light-hearted podcast experience. Discover what happens when two friends come together to share
-				their love for the things that make life awesome.
+				Welcome to the Rogue Rebels Podcast! We are a costuming, podcasting, Star Wars loving family who will talk you through our Star Wars
+				thoughts from the Films, TV shows, comics, books, and more! Join the Rebellion!
 			</div>
 			<div className="flex flex-row flex-wrap items-center justify-center gap-2">
 				<Suspense fallback={''}>
@@ -40,9 +40,9 @@ export default async function Home() {
 				})}
 			</div>
 
-			<Suspense>
+			{/* <Suspense>
 				<Awards />
-			</Suspense>
+			</Suspense> */}
 
 			<Suspense fallback={<Loading />}>
 				<Reviews />

@@ -5,7 +5,7 @@ export default function LinkCard({ link, bg, icon, title, color = 'text-white' }
 	const classes = classnames([color, bg])
 	return (
 		<a
-			className={`min-w-[250px] flex-[1_1_250px] max-w-[350px] flex flex-row justify-center items-center text-3xl h-[3.25rem] gap-2 pb-0  rounded-2xl animate-fadeInUp transition-all  hover:scale-105 ${classes}`}
+			className={`min-w-[250px] flex-[1_1_250px] max-w-[350px] flex flex-row justify-center items-center text-3xl h-[3.25rem] gap-2 pb-0 outline-zinc-300 outline-dashed rounded-2xl animate-fadeInUp transition-all hover:scale-105 ${classes}`}
 			href={link}
 			target="_blank"
 			rel="noopener noreferrer"

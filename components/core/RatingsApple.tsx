@@ -10,7 +10,7 @@ export default async function RatingsApple() {
 
 	return (
 		<a
-			className="flex flex-row items-center px-2 py-1 text-xs font-bold leading-normal text-white rounded-lg whitespace-nowrap bg-applepodcasts"
+			className="flex flex-row items-center px-2 py-1 text-xs font-bold leading-normal text-white border rounded-lg whitespace-nowrap bg-applepodcasts outline-zinc-300 outline-dashed"
 			href={appleData.appleRatingUrl || ''}
 			target="_blank"
 			rel="noopener noreferrer"

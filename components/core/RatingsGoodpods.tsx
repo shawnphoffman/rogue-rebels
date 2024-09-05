@@ -23,7 +23,7 @@ export default async function RatingsGoodpods() {
 
 	return (
 		<a
-			className="flex flex-row items-center px-2 py-1 text-xs font-bold leading-normal text-black rounded-lg whitespace-nowrap bg-goodpods"
+			className="flex flex-row items-center px-2 py-1 text-xs font-bold leading-normal text-black rounded-lg outline-zinc-300 outline-dashed whitespace-nowrap bg-goodpods"
 			href={spotifyData.url || ''}
 			target="_blank"
 			rel="noopener noreferrer"
