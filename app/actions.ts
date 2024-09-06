@@ -5,7 +5,26 @@ import { sanitize } from 'isomorphic-dompurify'
 
 import { appleRatingUrl, rssFeedUrl } from './(pages)/(links)/links'
 
+const wpMenuFields = `ID,locations,menus`
 const wpPostFields = `ID,title,author,excerpt,slug,date,categories,content,URL,featured_image,post_thumbnail`
+
+export async function getWordpressMenus() {
+	'use server'
+	const res = await fetch(`${encodeURI(process.env.WORDPRESS_API_URL!)}/menus/?fields=${wpMenuFields}`, {
+		headers: {
+			Authorization: `Bearer ${process.env.WORDPRESS_API_KEY}`,
+		},
+		next: { revalidate: 60 * 60 * 1 },
+	})
+
+	// console.log('getMenus', res)
+
+	const data = await res.json()
+
+	// console.log('getPost', data)
+
+	return data
+}
 
 export async function getWordpressPost(slug: string) {
 	const res = await fetch(`${process.env.WORDPRESS_API_URL}/posts/slug:${slug}`)

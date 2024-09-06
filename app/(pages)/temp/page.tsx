@@ -1,0 +1,13 @@
+import { Suspense } from 'react'
+
+import Menu from '@/components/core/Menu'
+
+export default async function Temp() {
+	return (
+		<div className="flex w-full text-left">
+			<Suspense fallback={<div>Loading...</div>}>
+				<Menu />
+			</Suspense>
+		</div>
+	)
+}

@@ -9,7 +9,6 @@ import { siteDescription, siteTitle, siteUrl } from '@/app/meta'
 // import headerImage from '@/app/title.png'
 import ActiveLink from '@/components/core/ActiveLink'
 import RandomHeader from '@/components/core/RandomHeader'
-// import StarBackground from '@/components/core/StarBackground'
 
 export const metadata = {
 	title: {
