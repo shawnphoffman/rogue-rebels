@@ -3,7 +3,6 @@ import type { Metadata, ResolvingMetadata } from 'next'
 
 import { getAllWordpressPosts, getWordpressPost } from '@/app/actions'
 import { siteTitle } from '@/app/meta'
-import PostTitle from '@/components/updates/PostTitle'
 
 import type { WP_Post } from '../WordpressTypes'
 
@@ -35,7 +34,9 @@ export default async function BlogPage({ params }: PageProps) {
 	return (
 		<div className="w-full max-w-4xl gap-2 mb-8 rounded-lg">
 			{/* <h1 className="text-3xl font-bold text-zinc-50">Blog</h1> */}
-			<PostTitle>{post.title}</PostTitle>
+			<h1 className="w-full mb-2 text-3xl font-bold leading-tight tracking-tighter text-center sm:text-4xl md:text-5xl lg:text-6xl text-brand-gray md:leading-none text-balance">
+				{post.title}
+			</h1>
 
 			<div className="flex flex-row items-center justify-center gap-8 text-brand-muted">
 				<span>{publishDate}</span>
