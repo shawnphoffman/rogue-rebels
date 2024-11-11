@@ -9,7 +9,6 @@ const wpMenuFields = `ID,locations,menus`
 const wpPostFields = `ID,title,author,excerpt,slug,date,categories,content,URL,featured_image,post_thumbnail`
 
 export async function getWordpressMenus() {
-	'use server'
 	const res = await fetch(`${encodeURI(process.env.WORDPRESS_API_URL!)}/menus/?fields=${wpMenuFields}`, {
 		headers: {
 			Authorization: `Bearer ${process.env.WORDPRESS_API_KEY}`,
@@ -17,7 +16,7 @@ export async function getWordpressMenus() {
 		next: { revalidate: 60 * 60 * 1 },
 	})
 
-	// console.log('getMenus', res)
+	console.log('getMenus', res)
 
 	const data = await res.json()
 

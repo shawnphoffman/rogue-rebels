@@ -4,7 +4,7 @@ import Menu from '@/components/core/Menu'
 
 export default async function Temp() {
 	return (
-		<div className="flex w-full text-left">
+		<div className="flex flex-row justify-center w-full text-left">
 			<Suspense fallback={<div>Loading...</div>}>
 				<Menu />
 			</Suspense>
