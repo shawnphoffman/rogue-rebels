@@ -16,11 +16,32 @@ export async function getWordpressMenus() {
 		next: { revalidate: 60 * 60 * 1 },
 	})
 
-	console.log('getMenus', res)
+	const data = await res.json()
+
+	// console.log('getMenus', data.menus[2])
+	// console.log('getPost', data)
+
+	return data
+}
+
+export async function getWordpressCategories() {
+	const res = await fetch(`${process.env.WORDPRESS_API_URL}/categories`, {
+		next: { revalidate: 86400 },
+	})
 
 	const data = await res.json()
 
-	// console.log('getPost', data)
+	// console.log('getWordpressCategories', data)
+
+	return data.categories
+}
+
+export async function getWordpressCategory(slug: string) {
+	const res = await fetch(`${process.env.WORDPRESS_API_URL}/categories/slug:${slug}`)
+
+	const data = await res.json()
+
+	// console.log('getWordpressCategory', data)
 
 	return data
 }
@@ -30,14 +51,14 @@ export async function getWordpressPost(slug: string) {
 
 	const data = await res.json()
 
-	// console.log('getPost', data)
+	// console.log('getWordpressPost', data)
 
 	return data
 }
 
 export async function getAllWordpressPosts(count = 25, page = 0) {
 	const res = await fetch(`${process.env.WORDPRESS_API_URL}/posts/?number=${count}&fields=${wpPostFields}&page=${page + 1}`, {
-		next: { revalidate: 60 * 60 * 1 },
+		next: { revalidate: 360 },
 	})
 
 	const data = await res.json()
@@ -46,12 +67,21 @@ export async function getAllWordpressPosts(count = 25, page = 0) {
 	return data.posts
 }
 
-export async function getAllWordpressPostsByCriteria(category, tag, count = 20) {
-	const res = await fetch(`${process.env.WORDPRESS_API_URL}/posts/?number=${count}`)
+export async function getAllWordpressPostsByCriteria(categorySlug: string, count = 25, page = 0) {
+	let url = `${process.env.WORDPRESS_API_URL}/posts/?number=${count}&fields=${wpPostFields}&page=${page + 1}`
+	if (categorySlug) {
+		url += `&category=${categorySlug}`
+	}
+	// if (tag) {
+	// 	url += `&tag=${tag}`
+	// }
+	const res = await fetch(url, {
+		next: { revalidate: 360 },
+	})
 
 	const data = await res.json()
 
-	// console.log('getAllPosts', data)
+	// console.log('getAllWordpressPostsByCriteria', { url, data })
 
 	return data.posts
 }

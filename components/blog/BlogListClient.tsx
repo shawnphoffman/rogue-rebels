@@ -11,16 +11,25 @@ import { getAllWordpressPosts } from '@/app/actions'
 
 const NUMBER_TO_FETCH = 25
 
-export default function BlogListClient({ initalPosts }) {
-	const [offset, setOffset] = useState(1)
+const fetchPromiseExample = async page => {
+	return await getAllWordpressPosts(NUMBER_TO_FETCH, page)
+}
+
+export default function BlogListClient({ initalPosts, fetchPromise = fetchPromiseExample }) {
+	const [page, setPage] = useState(1)
+	const [more, setMore] = useState(true)
 	const [blogPosts, setBlogPosts] = useState(initalPosts)
 	const { ref, inView } = useInView({ delay: 1000, rootMargin: '200px' })
 
 	const loadMore = useCallback(async () => {
-		const apiBlogPosts = await getAllWordpressPosts(NUMBER_TO_FETCH, offset)
+		const apiBlogPosts = await fetchPromise(page)
+		if (!apiBlogPosts) {
+			setMore(false)
+			return
+		}
 		setBlogPosts(() => [...blogPosts, ...apiBlogPosts])
-		setOffset(() => offset + 1)
-	}, [blogPosts, offset])
+		setPage(() => page + 1)
+	}, [blogPosts, fetchPromise, page])
 
 	useEffect(() => {
 		if (inView) {
@@ -42,7 +51,7 @@ export default function BlogListClient({ initalPosts }) {
 							// height={Math.round(post.post_thumbnail.height * (200 / post.post_thumbnail.width) * 10) / 10}
 							// Rounding is dumb with Next
 							height={Math.round(post.post_thumbnail.height * (200 / post.post_thumbnail.width))}
-							className="w-auto h-fit rounded aspect-auto max-w-[200px]"
+							className="h-fit rounded aspect-auto max-w-[200px] w-[200px]"
 						/>
 						<div className="flex flex-col items-start justify-start flex-1 gap-1 ">
 							<div
@@ -58,7 +67,7 @@ export default function BlogListClient({ initalPosts }) {
 					</a>
 				</li>
 			))}
-			<div ref={ref}>Loading...</div>
+			{more && <div ref={ref}>Loading...</div>}
 			{/* <button onClick={loadMore}>Load More</button> */}
 		</ul>
 	)

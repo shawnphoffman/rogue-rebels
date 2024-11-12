@@ -48,6 +48,7 @@ export default function RootLayout({ children }) {
 								<ActiveLink href="/" label="Links" />
 								{/* <ActiveLink href="/updates" label="Updates" fuzzy /> */}
 								<ActiveLink href="/episodes" label="Episodes" />
+								<ActiveLink href="/blog/temp" label="Temp" />
 								{/* <ActiveLink href="/listen-now" label="Listen Now" /> */}
 							</nav>
 						</div>

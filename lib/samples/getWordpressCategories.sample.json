@@ -1,0 +1,593 @@
+{
+	"found": 49,
+	"categories": [
+		{
+			"ID": 107078905,
+			"name": "Age of Rebellion",
+			"slug": "age-of-rebellion",
+			"description": "Outnumbered, the Rebellion spreads across the galaxy. Rebel heroes fan the flickering light of hope in a heroic stand against the evil Galactic Empire.",
+			"post_count": 2,
+			"feed_url": "http: //theroguerebels.com/category/star-wars-eras/age-of-rebellion/feed/",
+			"parent": 758333326,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 4778297,
+			"name": "Ahsoka",
+			"slug": "ahsoka",
+			"description": "",
+			"post_count": 6,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/ahsoka/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 481991,
+			"name": "Andor",
+			"slug": "andor",
+			"description": "",
+			"post_count": 7,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/andor/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 11100237,
+			"name": "Anthology Films",
+			"slug": "anthology-films",
+			"description": "",
+			"post_count": 9,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/films/anthology-films/feed/",
+			"parent": 1186,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 686948825,
+			"name": "Books and other Short Stories",
+			"slug": "books-and-other-short-stories",
+			"description": "",
+			"post_count": 135,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/books-and-other-short-stories/feed/",
+			"parent": 1172,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 5205,
+			"name": "Celebration",
+			"slug": "celebration",
+			"description": "",
+			"post_count": 26,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/celebration/feed/",
+			"parent": 1172,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 756,
+			"name": "Comics",
+			"slug": "comics",
+			"description": "",
+			"post_count": 139,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/comics/feed/",
+			"parent": 1172,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 197122,
+			"name": "Costuming",
+			"slug": "costuming",
+			"description": "",
+			"post_count": 42,
+			"feed_url": "http: //theroguerebels.com/category/costuming/feed/",
+			"parent": 0,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 67839466,
+			"name": "Dawn of the Jedi",
+			"slug": "dawn-of-the-jedi",
+			"description": "",
+			"post_count": 0,
+			"feed_url": "http: //theroguerebels.com/category/star-wars-eras/dawn-of-the-jedi/feed/",
+			"parent": 758333326,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 108571272,
+			"name": "Fall Of The Jedi",
+			"slug": "fall-of-the-jedi",
+			"description": "A long forgotten menace returns as a Sith lord orchestrates a devastating conflict, plunging the galaxy into full scale war with the Jedi Knights at the frontlines.",
+			"post_count": 0,
+			"feed_url": "http: //theroguerebels.com/category/star-wars-eras/fall-of-the-jedi/feed/",
+			"parent": 758333326,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 1186,
+			"name": "Films",
+			"slug": "films",
+			"description": "",
+			"post_count": 5,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/films/feed/",
+			"parent": 1172,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 586,
+			"name": "Food",
+			"slug": "food",
+			"description": "",
+			"post_count": 34,
+			"feed_url": "http: //theroguerebels.com/category/food/feed/",
+			"parent": 0,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 132757248,
+			"name": "Galaxy's Edge",
+			"slug": "galaxys-edge",
+			"description": "",
+			"post_count": 20,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/galaxys-edge/feed/",
+			"parent": 1172,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 21,
+			"name": "Games",
+			"slug": "games",
+			"description": "",
+			"post_count": 20,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/games/feed/",
+			"parent": 1172,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 352158697,
+			"name": "Ghost Transmissions",
+			"slug": "ghost-transmissions",
+			"description": "",
+			"post_count": 422,
+			"feed_url": "http: //theroguerebels.com/category/ghost-transmissions/feed/",
+			"parent": 0,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 281675,
+			"name": "LEGO Star Wars",
+			"slug": "lego-star-wars",
+			"description": "",
+			"post_count": 13,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/lego-star-wars/feed/",
+			"parent": 1172,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 1550252,
+			"name": "New Jedi Order",
+			"slug": "new-jedi-order",
+			"description": "",
+			"post_count": 1,
+			"feed_url": "http: //theroguerebels.com/category/star-wars-eras/new-jedi-order/feed/",
+			"parent": 758333326,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 519579,
+			"name": "Obi-Wan Kenobi",
+			"slug": "obi-wan-kenobi",
+			"description": "",
+			"post_count": 6,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/obi-wan-kenobi/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 2060,
+			"name": "Podcasts",
+			"slug": "podcasts",
+			"description": "",
+			"post_count": 436,
+			"feed_url": "http: //theroguerebels.com/category/podcasts/feed/",
+			"parent": 0,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 706794781,
+			"name": "Reign Of The Empire",
+			"slug": "reign-of-the-empire",
+			"description": "Through treachery and deception, the Galactic Empire rules unchallenged and grows in military might. A scant few Jedi survivors retreat into the shadows as they are hunted down mercilessly.",
+			"post_count": 0,
+			"feed_url": "http: //theroguerebels.com/category/star-wars-eras/reign-of-the-empire/feed/",
+			"parent": 758333326,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 309,
+			"name": "Reviews",
+			"slug": "reviews",
+			"description": "",
+			"post_count": 198,
+			"feed_url": "http: //theroguerebels.com/category/reviews/feed/",
+			"parent": 0,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 706794858,
+			"name": "Rise Of The First Order",
+			"slug": "rise-of-the-first-order",
+			"description": "In secret, the legacy of the Empire transforms into the First Order and strikes a devastating blow against the New Republic. A fledgling Resistance and new generation of heroes are left to stand against a resurrected enemy.",
+			"post_count": 1,
+			"feed_url": "http: //theroguerebels.com/category/star-wars-eras/rise-of-the-first-order/feed/",
+			"parent": 758333326,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 686948752,
+			"name": "Rogue Rebels Podcast",
+			"slug": "rogue-rebels-podcast",
+			"description": "",
+			"post_count": 223,
+			"feed_url": "http: //theroguerebels.com/category/podcasts/rogue-rebels-podcast/feed/",
+			"parent": 2060,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 2347,
+			"name": "Series",
+			"slug": "series",
+			"description": "",
+			"post_count": 67,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/feed/",
+			"parent": 1172,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 539867895,
+			"name": "Skywalker Saga",
+			"slug": "skywalker-saga",
+			"description": "",
+			"post_count": 11,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/films/skywalker-saga/feed/",
+			"parent": 1186,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 111709134,
+			"name": "Spectre-1",
+			"slug": "spectre-1",
+			"description": "",
+			"post_count": 285,
+			"feed_url": "http: //theroguerebels.com/category/ghost-transmissions/spectre-1/feed/",
+			"parent": 352158697,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 23329677,
+			"name": "Spectre-2",
+			"slug": "spectre-2",
+			"description": "",
+			"post_count": 34,
+			"feed_url": "http: //theroguerebels.com/category/ghost-transmissions/spectre-2/feed/",
+			"parent": 352158697,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 338064335,
+			"name": "Spectre-3",
+			"slug": "spectre-3",
+			"description": "",
+			"post_count": 9,
+			"feed_url": "http: //theroguerebels.com/category/ghost-transmissions/spectre-3/feed/",
+			"parent": 352158697,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 340811059,
+			"name": "Spectre-5",
+			"slug": "spectre-5",
+			"description": "",
+			"post_count": 140,
+			"feed_url": "http: //theroguerebels.com/category/ghost-transmissions/spectre-5/feed/",
+			"parent": 352158697,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 387616135,
+			"name": "Spectre-6",
+			"slug": "spectre-6",
+			"description": "",
+			"post_count": 22,
+			"feed_url": "http: //theroguerebels.com/category/ghost-transmissions/spectre-6/feed/",
+			"parent": 352158697,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 1172,
+			"name": "Star Wars",
+			"slug": "star-wars",
+			"description": "",
+			"post_count": 648,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/feed/",
+			"parent": 0,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 758333326,
+			"name": "Star Wars Eras",
+			"slug": "star-wars-eras",
+			"description": "Content grouped by the official eras along the Star Wars timeline.",
+			"post_count": 3,
+			"feed_url": "http: //theroguerebels.com/category/star-wars-eras/feed/",
+			"parent": 0,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 434510393,
+			"name": "Star Wars Geek Girl",
+			"slug": "star-wars-geek-girl",
+			"description": "",
+			"post_count": 176,
+			"feed_url": "http: //theroguerebels.com/category/podcasts/star-wars-geek-girl/feed/",
+			"parent": 2060,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 119489071,
+			"name": "Star Wars Rebels",
+			"slug": "star-wars-rebels",
+			"description": "",
+			"post_count": 41,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/star-wars-rebels/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 437162286,
+			"name": "Star Wars Resistance",
+			"slug": "star-wars-resistance",
+			"description": "",
+			"post_count": 33,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/star-wars-resistance/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 23215012,
+			"name": "Star Wars: Visions",
+			"slug": "star-wars-visions",
+			"description": "",
+			"post_count": 11,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/star-wars-visions/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 58815,
+			"name": "Tales",
+			"slug": "tales",
+			"description": "",
+			"post_count": 2,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/tales/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 12132955,
+			"name": "The Acolyte",
+			"slug": "the-acolyte",
+			"description": "",
+			"post_count": 7,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/the-acolyte/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 251990634,
+			"name": "The Bad Batch",
+			"slug": "the-bad-batch",
+			"description": "",
+			"post_count": 45,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/the-bad-batch/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 711116352,
+			"name": "The Book of Boba Fett",
+			"slug": "the-book-of-boba-fett",
+			"description": "",
+			"post_count": 19,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/the-book-of-boba-fett/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 1190885,
+			"name": "The Clone Wars",
+			"slug": "the-clone-wars",
+			"description": "",
+			"post_count": 24,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/the-clone-wars/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 692842861,
+			"name": "The High Republic",
+			"slug": "the-high-republic",
+			"description": "",
+			"post_count": 68,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/the-high-republic/feed/",
+			"parent": 1172,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 772526034,
+			"name": "The High Republic",
+			"slug": "the-high-republic",
+			"description": "Under the protection of the Jedi Knights and the wise rule of the Senate, the Republic grows into a golden age. The vast Outer Rim beckons the intrepid seeking to discover new worlds and spread the optimism of the Republic.",
+			"post_count": 0,
+			"feed_url": "http: //theroguerebels.com/category/star-wars-eras/the-high-republic/feed/",
+			"parent": 758333326,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 650968762,
+			"name": "The Mandalorian",
+			"slug": "the-mandalorian",
+			"description": "",
+			"post_count": 37,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/the-mandalorian/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 775198,
+			"name": "The New Republic",
+			"slug": "the-new-republic",
+			"description": "The Empire has been defeated, and the emergent New Republic faces the great challenge of rebuilding and reuniting the galaxy. It is a tentative and fragile peace, threatened by the remnants of the Empire.",
+			"post_count": 1,
+			"feed_url": "http: //theroguerebels.com/category/star-wars-eras/the-new-republic/feed/",
+			"parent": 758333326,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 9176685,
+			"name": "The Old Republic",
+			"slug": "the-old-republic",
+			"description": "The Republic is founded among the worlds of the Galactic Core, and the Jedi Order emerges to protect it. A schism within the Jedi leads to the creation of the Sith in this epic era.",
+			"post_count": 0,
+			"feed_url": "http: //theroguerebels.com/category/star-wars-eras/the-old-republic/feed/",
+			"parent": 758333326,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 1,
+			"name": "Uncategorized",
+			"slug": "uncategorized",
+			"description": "",
+			"post_count": 3,
+			"feed_url": "http: //theroguerebels.com/category/uncategorized/feed/",
+			"parent": 0,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 749959230,
+			"name": "Young Jedi Adventures",
+			"slug": "young-jedi-adventures",
+			"description": "",
+			"post_count": 2,
+			"feed_url": "http: //theroguerebels.com/category/star-wars/series/young-jedi-adventures/feed/",
+			"parent": 2347,
+			"meta": [
+				null
+			]
+		},
+		{
+			"ID": 6567,
+			"name": "Youtube",
+			"slug": "youtube",
+			"description": "",
+			"post_count": 27,
+			"feed_url": "http: //theroguerebels.com/category/youtube/feed/",
+			"parent": 0,
+			"meta": [
+				null
+			]
+		}
+	]
+}
