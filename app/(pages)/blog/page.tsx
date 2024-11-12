@@ -16,7 +16,7 @@ export default async function BlogPage() {
 	const blogPosts = await getAllWordpressPosts(25)
 	return (
 		<div className="w-full max-w-3xl p-4 mb-8 rounded-lg ">
-			<Suspense fallback={<p>Loading...</p>}>
+			<Suspense>
 				<BlogListClient initalPosts={blogPosts} />
 			</Suspense>
 		</div>

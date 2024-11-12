@@ -2,12 +2,14 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { format } from 'date-fns'
+import { format, set } from 'date-fns'
 import { sanitize } from 'isomorphic-dompurify'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { WP_Post } from '@/app/(pages)/blog/WordpressTypes'
 import { getAllWordpressPosts } from '@/app/actions'
+import Loading from '@/components/core/Loading'
 
 const NUMBER_TO_FETCH = 25
 
@@ -17,13 +19,17 @@ const fetchPromiseExample = async page => {
 
 export default function BlogListClient({ initalPosts, fetchPromise = fetchPromiseExample }) {
 	const [page, setPage] = useState(1)
+	const [loading, setLoading] = useState(false)
 	const [more, setMore] = useState(true)
 	const [blogPosts, setBlogPosts] = useState(initalPosts)
-	const { ref, inView } = useInView({ delay: 1000, rootMargin: '200px' })
+	const { ref, inView } = useInView({ delay: 1500, rootMargin: '200px' })
 
 	const loadMore = useCallback(async () => {
+		setLoading(true)
 		const apiBlogPosts = await fetchPromise(page)
-		if (!apiBlogPosts) {
+		console.log('apiBlogPosts', apiBlogPosts)
+		setLoading(false)
+		if (!apiBlogPosts || apiBlogPosts.length === 0) {
 			setMore(false)
 			return
 		}
@@ -32,17 +38,20 @@ export default function BlogListClient({ initalPosts, fetchPromise = fetchPromis
 	}, [blogPosts, fetchPromise, page])
 
 	useEffect(() => {
-		if (inView) {
+		if (inView && !loading && more) {
 			loadMore()
 		}
-	}, [inView, loadMore])
+	}, [inView, loadMore, loading, more])
 
 	return (
 		<ul className="flex flex-col items-center justify-center gap-2 text-left">
 			{blogPosts.map((post: WP_Post) => (
 				<li key={post.ID} className="flex flex-col w-full gap-2">
-					<a href={`/blog/${post.slug}`} className="flex flex-row justify-between w-full gap-4 pb-2 border-b text-brand-gray">
-						{/* <Image src={post.featured_image} alt={post.title} width={200} height={200} className="rounded" /> */}
+					<Link
+						href={`/blog/${post.slug}`}
+						className="flex flex-row justify-between w-full gap-4 pb-2 border-b text-brand-gray"
+						suppressHydrationWarning
+					>
 						<Image
 							src={post.post_thumbnail.URL}
 							alt={post.title}
@@ -53,7 +62,7 @@ export default function BlogListClient({ initalPosts, fetchPromise = fetchPromis
 							height={Math.round(post.post_thumbnail.height * (200 / post.post_thumbnail.width))}
 							className="h-fit rounded aspect-auto max-w-[200px] w-[200px]"
 						/>
-						<div className="flex flex-col items-start justify-start flex-1 gap-1 ">
+						<div className="flex flex-col items-start justify-start flex-1 gap-1 " suppressHydrationWarning>
 							<div
 								className="text-xl font-semibold text-brand-gray"
 								dangerouslySetInnerHTML={{ __html: sanitize(`${post.ID} - ${post.title}`) }}
@@ -64,11 +73,14 @@ export default function BlogListClient({ initalPosts, fetchPromise = fetchPromis
 							</div>
 							<div className="text-pretty" dangerouslySetInnerHTML={{ __html: post.excerpt }}></div>
 						</div>
-					</a>
+					</Link>
 				</li>
 			))}
-			{more && <div ref={ref}>Loading...</div>}
-			{/* <button onClick={loadMore}>Load More</button> */}
+			{more && (
+				<div ref={ref}>
+					<Loading />
+				</div>
+			)}
 		</ul>
 	)
 }

@@ -32,7 +32,7 @@ export default async function BlogPage({ params }: PageProps) {
 	const publishDate = format(new Date(post.date), 'MMMM d, yyyy')
 
 	return (
-		<div className="w-full max-w-4xl gap-2 mb-8 rounded-lg">
+		<div className="flex flex-col w-full max-w-4xl gap-2 mb-8 rounded-lg">
 			{/* <h1 className="text-3xl font-bold text-zinc-50">Blog</h1> */}
 			<h1 className="w-full mb-2 text-3xl font-bold leading-tight tracking-tighter text-center sm:text-4xl md:text-5xl lg:text-6xl text-brand-gray md:leading-none text-balance">
 				{post.title}

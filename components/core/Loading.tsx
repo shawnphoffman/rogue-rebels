@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Loading() {
 	return (
-		<div className="text-4xl text-white">
+		<div className="text-4xl text-purple-500">
 			<FontAwesomeIcon icon={faSpaceStationMoonConstruction} beatFade />
 		</div>
 	)

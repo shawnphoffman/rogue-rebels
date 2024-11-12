@@ -54,35 +54,13 @@ export default async function CategoryPage({ params }: PageProps) {
 	// const publishDate = format(new Date(post.date), 'MMMM d, yyyy')
 
 	return (
-		<div className="w-full max-w-4xl gap-2 mb-8 rounded-lg">
+		<div className="flex flex-col w-full max-w-4xl gap-6 mb-8 rounded-lg">
 			<h1 className="w-full mb-2 text-3xl font-bold leading-tight tracking-tighter text-center sm:text-4xl md:text-5xl lg:text-6xl text-brand-gray md:leading-none text-balance">
-				{/* {post.title} */}
 				{category.name}
 			</h1>
-			<Suspense fallback={<p>Loading...</p>}>
+			<Suspense>
 				<BlogListClient initalPosts={posts} fetchPromise={fetchPromise} />
 			</Suspense>
-
-			{/* <div className="flex flex-row items-center justify-center gap-8 text-brand-muted">
-				<span>{posts}</span>
-			</div> */}
-
-			{/*
-			<div className="flex flex-row flex-wrap items-center justify-center gap-1 text-brand-muted">
-				{Object.values(post.categories).map(category => (
-					<span className="text-xs px-2 py-0.5 border rounded-full text-nowrap" key={category.ID}>
-						{category.name}
-					</span>
-				))}
-			</div>
-
-			<a href={post.URL} className="text-brand-fallback hover:text-brand-fallback hover:bg-squiggle">
-				WP Link
-			</a>
-
-			<div className="text-left wp-content">
-				<div dangerouslySetInnerHTML={{ __html: post.content }} />
-			</div> */}
 		</div>
 	)
 }
