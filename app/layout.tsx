@@ -44,11 +44,10 @@ export default function RootLayout({ children }) {
 							<RandomHeader />
 							{/* NAV */}
 							<nav className="flex flex-row flex-wrap justify-center w-full gap-4 p-2 my-4 border border-dashed border-zinc-300 border-x-0">
-								<ActiveLink href="/blog" label="Blog (WIP)" />
+								<ActiveLink href="/blog" label="Blog" />
 								<ActiveLink href="/" label="Links" />
 								{/* <ActiveLink href="/updates" label="Updates" fuzzy /> */}
 								<ActiveLink href="/episodes" label="Episodes" />
-								<ActiveLink href="/blog/temp" label="Temp" />
 								{/* <ActiveLink href="/listen-now" label="Listen Now" /> */}
 							</nav>
 						</div>
