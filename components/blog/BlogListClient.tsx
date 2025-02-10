@@ -60,7 +60,7 @@ export default function BlogListClient({ initalPosts, fetchPromise = fetchPromis
 							// height={Math.round(post.post_thumbnail.height * (200 / post.post_thumbnail.width) * 10) / 10}
 							// Rounding is dumb with Next
 							height={Math.round(post.post_thumbnail.height * (200 / post.post_thumbnail.width))}
-							className="h-fit rounded aspect-auto max-w-[200px] w-[200px]"
+							className="h-fit rounded max-w-[200px] w-[200px]"
 						/>
 						<div className="flex flex-col items-start justify-start flex-1 gap-1 " suppressHydrationWarning>
 							<div

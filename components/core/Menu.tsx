@@ -28,7 +28,7 @@ export default async function Menu() {
 	const primaryLocation = menus?.locations.find(x => x.defaultState === 'default')?.name
 
 	const defaultMenu = menus?.menus.find(x => x.locations.includes(primaryLocation))
-	// console.log('defaultMenu', defaultMenu)
+	console.log('defaultMenu', defaultMenu)
 
 	const getCategoryDetails = (categoryId: number) => {
 		// console.log('getCategoryDetails', categoryId)
@@ -44,6 +44,7 @@ export default async function Menu() {
 					const hasChildren = item.items && item.items.length > 0
 					const isCategory = item.type === 'category'
 					const category = isCategory ? getCategoryDetails(item.content_id) : null
+					// console.log('category', category)
 					return (
 						<NavigationMenuItem key={item.id}>
 							{hasChildren ? (
@@ -55,6 +56,7 @@ export default async function Menu() {
 												if (subItem.type === 'category') {
 													const category = getCategoryDetails(subItem.content_id)
 													if (!category) return null
+													// console.log('category', category)
 													return (
 														<ListItem key={subItem.id} title={subItem.name} href={`/blog/category/${category.slug}`}>
 															{/* {category?.description} */}
@@ -98,11 +100,21 @@ export default async function Menu() {
 								</>
 							) : (
 								// <Link href={item.url} legacyBehavior passHref>
-								<Link href={`/blog/category/${category.slug}`} legacyBehavior passHref>
-									<NavigationMenuLink className={twMerge(navigationMenuTriggerStyle(), 'font-semibold border')}>
-										{item.name}
-									</NavigationMenuLink>
-								</Link>
+								<>
+									{category ? (
+										<Link href={`/blog/category/${category.slug}`} legacyBehavior passHref>
+											<NavigationMenuLink className={twMerge(navigationMenuTriggerStyle(), 'font-semibold border')}>
+												{item.name}
+											</NavigationMenuLink>
+										</Link>
+									) : (
+										<Link href={item.url} legacyBehavior passHref>
+											<NavigationMenuLink className={twMerge(navigationMenuTriggerStyle(), 'font-semibold border')}>
+												{item.name}
+											</NavigationMenuLink>
+										</Link>
+									)}
+								</>
 							)}
 						</NavigationMenuItem>
 					)

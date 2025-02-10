@@ -6,6 +6,7 @@ export const dynamic = 'force-dynamic'
 export async function GET(request: NextRequest) {
 	console.log('Revalidating "episodes" tag')
 	revalidateTag('episodes')
+	revalidatePath('/blog')
 
 	const searchParams = request.nextUrl.searchParams
 	const force = searchParams.get('force')
