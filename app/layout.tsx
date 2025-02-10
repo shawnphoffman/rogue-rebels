@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
 			<body className="px-2 py-0 mx-auto my-0 text-black min-h-dvh w-dvw">
 				{/* <StarBackground /> */}
 				<div className="flex flex-col items-center w-full max-w-screen-xl mx-auto">
-					<div className="flex flex-col w-full max-w-4xl p-4 m-4 bg-white rounded md:px-12 md:py-8 min-h-dvh ">
+					<div className="flex flex-col w-full max-w-4xl p-4 m-4 bg-white rounded md:px-12 md:py-8">
 						<div className="flex flex-col items-center text-center">
 							<h1 className="sr-only">{siteTitle}</h1>
 							{/* IMAGE */}
