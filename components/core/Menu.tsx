@@ -62,11 +62,14 @@ export default async function Menu() {
 															{/* {category?.description} */}
 														</ListItem>
 													)
+												} else if (subItem.type === 'custom') {
+													return <ListItem key={subItem.id} title={subItem.name} href={subItem.url} />
 												}
 												return null
 											})}
 										</ul>
 										{item.items.map(subItem => {
+											console.log('subItem', subItem)
 											if (subItem.type === 'post_tag') {
 												return (
 													<ul key={subItem.id} className={twMerge(ulClasses)}>
